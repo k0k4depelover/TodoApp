@@ -4,8 +4,5 @@ from sqlalchemy.ext.declarative import declarative_base
 
 SQLALCHEMY_DATABASE_URL = 'postgresql://deply_database_user:lYq5e3NQNdbXfYtm96YuZ86ycxyiQPyN@dpg-d15rfe6mcj7s73dnehb0-a/deply_database'
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={'check_same_thread': False})
+engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-Base = declarative_base()
